@@ -24,6 +24,15 @@
             padding-bottom: 4vw;
         }
 
+        .tabs .indicator {
+            background-color: silver;
+        }
+
+        .tabs .tab a:focus,
+        .tabs .tab a:focus.active {
+            background-color: rgb(236, 236, 236);
+        }
+
         @media screen and (max-width:670px) {
             header {
                 min-height: 300px;
@@ -43,9 +52,18 @@
                     <i class="material-icons">menu</i>
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Photo's</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#photos">Photo's</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#" class="tooltipped btn-floating btn-small transparent" data-tooltip="lorem">
+                            <i class="fab fa-instagram"></i></a>
+                    </li>
+                    <li><a href="#" class="tooltipped btn-floating btn-small transparent " data-tooltip="lorem">
+                            <i class="fab fa-facebook"></i></a>
+                    </li>
+                    <li><a href="#" class="tooltipped btn-floating btn-small  transparent" data-tooltip="lorem">
+                            <i class="fab fa-linkedin"></i></a>
+                    </li>
                 </ul>
                 <!-- menu mobilne -->
                 <ul class="sidenav grey lighten-2" id="mobile-menu">
@@ -58,7 +76,7 @@
     </header>
 
     <!-- photo grid -->
-    <section class="container section" id="photos">
+    <section class="container section scrollspy" id="photos">
         <div class="row">
             <div class="col s12 l4">
                 <img src="img/woman.jpg" alt="woman" class="responsive-img materialboxed">
@@ -112,7 +130,7 @@
 
     </div>
     <!-- service and tabs -->
-    <div class="container section" id="services">
+    <div class="container section scrollspy" id="services">
         <div class="row">
             <div class="col s12 l4">
                 <h2 class="grey-text text-darken-4">Lorem, ipsum dolor.</h2>
@@ -123,39 +141,152 @@
             <div class="col s12 l6 offset-l2">
                 <ul class="tabs">
                     <li class="tab col s6">
-                        <a href="#" class="grey darken-1"></a>
+                        <a href="#tab1" class="grey-text text-darken-3">Tab 1</a>
+                    </li>
+                    <li class="tab col s6">
+                        <a href="#tab2" class="grey-text text-darken-3">Tab 2</a>
                     </li>
                 </ul>
+                <div class="col s12" id="tab1">
+                    <p>Tab 1</p>
+                    <p class="flow-text grey-text text-darken-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quod voluptatem nostrum, ut vitae
+                        dolores.
+                    </p>
+                </div>
+
+                <div class="col s12" id="tab2">
+                    <p>Tab 2</p>
+                    <p class="flow-text grey-text text-darken-4">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi quod voluptatem nostrum, ut vitae
+                        dolores. Lorem ipsum dolor sit amet.
+                    </p>
+                </div>
             </div>
 
         </div>
+    </div>
 
-        <!-- parallax -->
-        <div class="parallax-container">
-            <div class="parallax">
+    <!-- parallax -->
+    <div class="parallax-container">
+        <div class="parallax">
+            <img src="img/baner3.jpg" alt="" class="responsive-img">
+        </div>
 
-                <img src="img/baner3.jpg" alt="" class="responsive-img">
+    </div>
+
+    <!-- contact -->
+    <section class="section container scrollspy" id="contact">
+        <div class="row">
+            <div class="col s12 l5">
+                <h1 class="grey-text text-darken-4">Contact</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quia. </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quia. </p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, quia. </p>
             </div>
 
+            <div class="col s12 l5 offset-l2">
+                <form action="">
+                    <div class="input-field">
+                        <i class="material-icons prefix">email</i>
+                        <input type="email" name="" id="email">
+                        <label for="email">e-mail</label>
+                    </div>
+
+                    <div class="input-field">
+                        <i class="material-icons prefix">message</i>
+                        <textarea name="" id="message" class="materialize-textarea"></textarea>
+
+                        <label for="message">Message</label>
+                    </div>
+
+                    <div class="input-field">
+
+                        <input type="text" id="date" class="datepicker">
+                        <label for="date">Date</label>
+                    </div>
+
+                    <div class="input-field">
+                        <p>Services...</p>
+                        <p>
+                            <label>
+                                <input type="checkbox">
+                                <span>Lorem Ipsum</span>
+                            </label>
+                        </p>
+
+                        <p>
+                            <label>
+                                <input type="checkbox">
+                                <span>Lorem Ipsum</span>
+                            </label>
+                        </p>
+
+                        <p>
+                            <label>
+                                <input type="checkbox">
+                                <span>Lorem Ipsum</span>
+                            </label>
+                        </p>
+                    </div>
+
+                    <div class="input-field center">
+                        <button class="btn">Submit</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <!-- contact -->
-        <!-- footer -->
+    </section>
+    <!-- footer -->
+    <footer class="page-footer grey darken-2">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 l6">
+                    <h5>About </h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, harum.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, harum.</p>
+                </div>
+
+                <div class="col s12 l4 offset-l2">
+                    <h5>Connects</h5>
+                    <ul>
+                        <li><a href="#">Link 01</a></li>
+                        <li><a href="#">Link 02</a></li>
+                        <li><a href="#">Link 03</a></li>
+                        <li><a href="#">Link 04</a></li>
+                        <li><a href="#">Link 05</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copyright grey darken-4">
+            <div class="container center-align">
+                &copy; Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, fugiat.
+            </div>
+        </div>
+    </footer>
 
 
-
-        <!-- js -->
-        <script src="https://kit.fontawesome.com/9d73c4a3e2.js"></script>
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $('.sidenav').sidenav();
-                $('.materialboxed').materialbox();
-                $('.parallax').parallax();
+    <!-- js -->
+    <script src="https://kit.fontawesome.com/9d73c4a3e2.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+            $('.materialboxed').materialbox();
+            $('.parallax').parallax();
+            $('.tabs').tabs();
+            $('.datepicker').datepicker({
+                disableWeekends: true
             })
-        </script>
+            $('.tooltipped').tooltip();
+            $('.scrollspy').scrollSpy()
+        })
+    </script>
 </body>
 
 </html>
@@ -194,4 +325,6 @@
 
     halfway-fab - kresla pozycję miedzy elementami, np. favorite ikon pomiedzy divami
     nav-navwraper
+
+    prefix - klasa w ikonie , ustawia ikonę przed inoutem
 -->
